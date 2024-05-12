@@ -27,6 +27,9 @@ pip3 install opencv-python
 conda install opencv-python
 ```
 
+## Limitations
+- The video cannot be of a high resolution as each frame has to be encoded into 5 digits. If the size of the frame is larger than 99999 bytes, the script will drop the frame.
+- Frames larger than approxmiately 9000 bytes will cause network drops because of UDP packet size limitations.
 
 ## License
 

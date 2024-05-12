@@ -41,7 +41,7 @@ with tempfile.TemporaryDirectory() as tmpdir:
             if success:
                 with open(save_path, "rb") as f:
                     data = f.read()
-                    # ensure length can be encoded into 5 bits before writing frame
+                    # ensure length can be encoded into 5 digits before writing frame
                     if len(data) <= 10**5:
                         length_str = "{:05d}".format(len(data)).encode()
                         agg_file.write(length_str)
